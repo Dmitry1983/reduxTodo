@@ -1,10 +1,11 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import { AddTodo } from './containers/AddTodo'
 
 export const TodoApp = () => {
 	return (
 		<View style={styles.container}>
-			<Text>TodoApp</Text>
+			<AddTodo />
 		</View>
 	)
 }
@@ -12,8 +13,9 @@ export const TodoApp = () => {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: 'center',
+		paddingTop: 20,
 		alignItems: 'center',
 		backgroundColor: 'white',
+		//marginTop: 10,
 	},
 })
