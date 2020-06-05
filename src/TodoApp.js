@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { AddTodo } from './containers/AddTodo'
+import AddTodo from './containers/AddTodo'
 
 export const TodoApp = () => {
 	return (

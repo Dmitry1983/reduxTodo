@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
 	StyleSheet,
 	Text,
@@ -8,27 +8,36 @@ import {
 	TouchableOpacity,
 	Alert,
 } from 'react-native'
+import { connect, useDispatch, useSelector } from 'react-redux'
 
-export const AddTodo = () => {
+const AddTodo = () => {
+	const dispatch = useDispatch()
+	const [text, setText] = useState('')
+
+	const addTodo = str => {
+		dispatch({ type: 'ADD_TODO', str })
+		setText('')
+	}
 	return (
 		<View style={styles.view}>
 			<View style={styles.viewTextInput}>
 				<TextInput
+					value={text}
+					onChangeText={t => setText(t)}
 					style={styles.textInput}
 					placeholder="Input new text"
 					autoCapitalize="words"
 				/>
 			</View>
 
-			<TouchableOpacity
-				style={styles.butAdd}
-				onPress={() => Alert.alert('Add todo')}
-			>
+			<TouchableOpacity style={styles.butAdd} onPress={() => addTodo(text)}>
 				<Text style={styles.btnText}>ADD</Text>
 			</TouchableOpacity>
 		</View>
 	)
 }
+
+export default connect()(AddTodo)
 
 const styles = StyleSheet.create({
 	view: {
