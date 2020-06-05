@@ -10,6 +10,8 @@ import {
 } from 'react-native'
 import { connect, useDispatch, useSelector } from 'react-redux'
 
+const borderWidth = 0.2
+
 const AddTodo = () => {
 	const dispatch = useDispatch()
 	const [text, setText] = useState('')
@@ -44,19 +46,20 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 	},
 	viewTextInput: {
-		//borderWidth: 1,
+		borderWidth: borderWidth,
 		//borderColor: 'black',
 		borderRadius: 10,
 		width: '75%',
 		marginRight: 15,
 		paddingHorizontal: 10,
-		backgroundColor: '#a2d6f9',
+		backgroundColor: '#F4EFDC',
 	},
 	textInput: {
 		color: '#0b2545',
 	},
 	butAdd: {
 		backgroundColor: '#1e96fc',
+		borderWidth: borderWidth,
 		width: '15%',
 		justifyContent: 'center',
 		alignItems: 'center',

@@ -1,14 +1,23 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
-const Todolist = () => {
+export const TodoList = ({ todos, toogleTodo }) => {
 	return (
 		<View>
-			<Text />
+			{todos.map(todo => (
+				<TouchableOpacity key={todo.id} onPress={() => toogleTodo(todo.id)}>
+					<Text
+						style={{
+							fontSize: 24,
+							textDecorationLine: todo.complited ? 'line-through' : 'none',
+						}}
+					>
+						{todo.text}
+					</Text>
+				</TouchableOpacity>
+			))}
 		</View>
 	)
 }
-
-export default Todolist
 
 const styles = StyleSheet.create({})

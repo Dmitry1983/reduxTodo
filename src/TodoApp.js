@@ -13,7 +13,7 @@ export const TodoApp = () => {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		paddingTop: 20,
+		paddingTop: 30,
 		alignItems: 'center',
 		backgroundColor: 'white',
 		//marginTop: 10,
