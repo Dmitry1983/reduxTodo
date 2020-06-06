@@ -16,6 +16,5 @@ const styles = StyleSheet.create({
 		paddingTop: 30,
 		alignItems: 'center',
 		backgroundColor: 'white',
-		//marginTop: 10,
 	},
 })
