@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import AddTodo from './containers/AddTodo'
 
 export const TodoApp = () => {
@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		paddingTop: 30,
 		alignItems: 'center',
-		backgroundColor: 'white',
+		backgroundColor: 'grey',
 	},
 })

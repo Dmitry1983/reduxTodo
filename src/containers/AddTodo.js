@@ -4,28 +4,28 @@ import {
 	Text,
 	View,
 	TextInput,
-	Button,
 	TouchableOpacity,
-	Alert,
 } from 'react-native'
-import { connect, useDispatch, useSelector } from 'react-redux'
+import { connect, useDispatch } from 'react-redux'
 
 const borderWidth = 0.2
 
 const AddTodo = () => {
 	const dispatch = useDispatch()
-	const [text, setText] = useState('')
+	const initialState = ''
+	const [text, setText] = useState(initialState)
 
-	const addTodo = str => {
+	const addTodo = (str) => {
+		console.log(str)
 		dispatch({ type: 'ADD_TODO', str })
-		setText('')
+		setText(initialState)
 	}
 	return (
 		<View style={styles.view}>
 			<View style={styles.viewTextInput}>
 				<TextInput
 					value={text}
-					onChangeText={t => setText(t)}
+					onChangeText={(t) => setText(t)}
 					style={styles.textInput}
 					placeholder="Input new text"
 					autoCapitalize="words"

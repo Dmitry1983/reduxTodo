@@ -1,11 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { Text, View, TouchableOpacity } from 'react-native'
 
-export const TodoList = ({ todos, toogleTodo }) => {
+export const TodoList = ({ todos, toggleTodo }) => {
 	return (
 		<View>
-			{todos.map(todo => (
-				<TouchableOpacity key={todo.id} onPress={() => toogleTodo(todo.id)}>
+			{todos.map((todo) => (
+				<TouchableOpacity key={todo.id} onPress={() => toggleTodo(todo.id)}>
 					<Text
 						style={{
 							fontSize: 24,
@@ -19,5 +19,3 @@ export const TodoList = ({ todos, toogleTodo }) => {
 		</View>
 	)
 }
-
-const styles = StyleSheet.create({})
