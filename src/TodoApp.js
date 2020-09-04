@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, SafeAreaView } from 'react-native'
 import AddTodo from './containers/AddTodo'
 
 export const TodoApp = () => {
 	return (
-		<View style={styles.container}>
+		<SafeAreaView style={styles.container}>
 			<AddTodo />
-		</View>
+		</SafeAreaView>
 	)
 }
 
